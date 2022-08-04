@@ -26,6 +26,14 @@ h1, h3 {
     opacity: 1; 
 }
 
+@media (max-width: 768px){
+    .weather-app {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
 .weather-app::before {
     content: "";
     position: absolute;
@@ -48,6 +56,13 @@ h1, h3 {
     align-items: flex-start;
     flex-direction: column;
     padding: 2em 3em 4em 3em;
+}
+
+@media (max-width: 768px){
+    .container {
+        height: 30%;
+        padding: 1em 1.25em;
+    }
 }
 
 .container > div {
@@ -78,11 +93,29 @@ h1, h3 {
     margin: 0.5em 0;
 }
 
+@media (max-width: 768px){
+    .city-time{
+        font-size: .63em;
+    }
+
+    .temp{
+        font-size: 3em;
+    }
+
+    .weather img {
+        margin: 0;
+    }
+
+    .weather .condition {
+        font-size: .75em;
+    }
+}
+
 .panel {
     position: absolute;
     width: 30%;
     height: 100%;
-    top: 0;
+    /* top: 0; */
     right: 0;
     background-color: rgba(100, 110, 110, 0.25);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
@@ -98,10 +131,23 @@ h1, h3 {
     margin-bottom: 2em;
 }
 
+@media (max-width: 768px){
+    .panel {
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .panel form {
+        margin-bottom: 0;
+    }
+}
+
 .submit {
     position: absolute;
     top: 0;
-    right: 3%;
+    right: 0;
     padding: 1.5em;
     margin: 0;
     margin-left: 2em;
@@ -112,6 +158,12 @@ h1, h3 {
     cursor: pointer;
     font-size: 1.2em;
     transition: 0.4s;
+}
+
+@media (max-width: 768px){
+    .submit{
+        padding: 1.47em;
+    }
 }
 
 .submit:hover {
@@ -171,30 +223,16 @@ h1, h3 {
     align-items: center;
 }
 
-@media (max-widht: 800px){
-    .panel, .container {
-        position: relative;
-        width: 100%;
-        top: initial;
-    }    
-
+@media (max-width: 768px){
     .panel .cities {
-        padding-top: 0;
-    }
-}
-
-@media (max-widht: 500px){
-    html {
-        font-size: 12px;
-    }
-}
-
-@media (max-widht: 300px){
-    .weather-app {
-        min-width: 40em;
+        padding: 0;
     }
 
-    .panel .cities {
-        padding-top: 0;
+    .panel ul li {
+        margin: 1em 0;
+    }
+
+    .panel ul h4 {
+        margin: 1.5em 0; 
     }
 }
