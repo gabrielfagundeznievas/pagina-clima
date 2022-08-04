@@ -171,7 +171,7 @@ h1, h3 {
     align-items: center;
 }
 
-@media screen and (max-widht: 800px){
+@media (max-widht: 800px){
     .panel, .container {
         position: relative;
         width: 100%;
@@ -183,13 +183,13 @@ h1, h3 {
     }
 }
 
-@media screen and (max-widht: 500px){
+@media (max-widht: 500px){
     html {
         font-size: 12px;
     }
 }
 
-@media screen and (max-widht: 300px){
+@media (max-widht: 300px){
     .weather-app {
         min-width: 40em;
     }
